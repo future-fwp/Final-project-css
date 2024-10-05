@@ -28,10 +28,10 @@
 			}
 
 			main {
-				display: flex;
-				flex-wrap: wrap;
+				display: grid;
+				grid-template-columns: 1fr; /* Single column for mobile view */
+				grid-gap: 10px; /* 10px gap between rows and columns */
 				justify-content: center;
-				align-items: flex-start;
 			}
 
 			section {
@@ -45,28 +45,52 @@
 			section img {
 				width: 100%;
 				height: auto;
-				max-height: 200px; /* Mobile default image size */
+				border-radius: 0;
 			}
 
 			/* Tablet View */
 			@media screen and (min-width: 772px) {
-				section {
-					width: 45%; /* Set sections to 45% of the viewport width */
+				main {
+					grid-template-columns: repeat(2, 1fr); /* Two-column grid for tablet */
 				}
 
 				section img {
-					max-height: 30vh; /* Set max-height to 30% of the viewport height */
+					border-radius: 50%; /* Circular images */
+				}
+
+				section:last-child {
+					grid-column: span 2; /* Last figure takes up both columns */
 				}
 			}
 
 			/* Large Screen View */
-			@media screen and (min-width: 998px) {
-				section {
-					width: 30%; /* Set sections to 30% of the viewport width */
+			@media screen and (min-width: 992px) {
+				main {
+					grid-template-columns: repeat(3, 1fr); /* Three-column grid */
 				}
 
 				section img {
-					max-height: none; /* Reset any max-height for images */
+					border-radius: 0; /* Remove border radius for all images */
+				}
+
+				section:nth-child(3n) {
+					grid-column: span 2; /* Every third figure takes up both columns */
+				}
+			}
+
+			/* Prefers Reduced Motion */
+			@media (prefers-reduced-motion: reduce) {
+				html {
+					scroll-behavior: auto; /* Disable smooth scrolling */
+				}
+			}
+
+			/* Dark Color Scheme */
+			@media (prefers-color-scheme: dark) {
+				section {
+					background-color: #333; /* Dark background for figures */
+					color: #ffdd57; /* Light font color */
+					border: 2px solid black; /* Black border */
 				}
 			}
 		</style>
@@ -79,7 +103,7 @@
 		<main>
 			<section>
 				<h2>About the Project</h2>
-				<p>This project demonstrates my understanding of HTML, accessibility, and web standards.</p>
+				<p>This project demonstrates my understanding of HTML, CSS, and accessibility.</p>
 			</section>
 			<section>
 				<h2>My Favorite Activities</h2>
@@ -92,24 +116,21 @@
 			<section>
 				<h2>Gallery</h2>
 				<img
-					src="image1.jpg"
-					alt="A scenic view of mountains"
-					width="300"
+					src="myImage1.jpg"
+					alt="A scenic view of a forest"
 				/>
 				<img
-					src="image2.jpg"
-					alt="A city skyline at night"
-					width="300"
+					src="myImage2.jpg"
+					alt="A vibrant city street"
 				/>
 				<img
-					src="image3.jpg"
-					alt="A beautiful beach during sunset"
-					width="300"
+					src="myImage3.jpg"
+					alt="A peaceful lake at sunset"
 				/>
 			</section>
-			<footer>
-				<p>Check out my favorite website: <a href="https://www.example.com">Example.com</a></p>
-			</footer>
 		</main>
+		<footer>
+			<p>Check out my favorite website: <a href="https://www.example.com">Example.com</a></p>
+		</footer>
 	</body>
 </html>
