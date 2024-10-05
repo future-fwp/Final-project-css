@@ -1,0 +1,96 @@
+/* Style the body */
+body {
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+}
+
+/* Style the header */
+header {
+	background-color: #f0f0f0;
+	padding: 20px;
+}
+
+/* Style the nav */
+nav ul {
+	display: flex;
+	justify-content: space-around;
+	background-color: #333;
+	padding: 10px;
+}
+
+nav ul li {
+	list-style-type: none;
+}
+
+nav ul li a {
+	color: white;
+	text-decoration: none;
+	padding: 10px 20px;
+}
+
+nav ul li a:hover {
+	background-color: #555;
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
+}
+
+/* Skip to Main Content link */
+.skip-to-main {
+	position: absolute;
+	top: -1000px;
+	left: -1000px;
+}
+
+.skip-to-main:focus {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	background-color: yellow;
+	padding: 10px;
+	z-index: 100;
+}
+
+/* Style the main content */
+main {
+	background-color: #f9f9f9;
+	padding: 20px;
+	font-size: 18px;
+}
+
+/* Style all images using the box model */
+img {
+	border: 2px solid #333;
+	padding: 5px;
+	border-radius: 10px;
+	width: 100%;
+	max-width: 300px;
+}
+
+/* Apply grid property to the gallery */
+.grid-container {
+	display: grid;
+	grid-template-columns: repeat(2, 40%);
+	gap: 20px;
+	justify-content: center;
+}
+
+/* Style the footer */
+footer {
+	background-color: #333;
+	color: white;
+	padding: 20px;
+	text-align: center;
+}
+
+/* Interactivity on images */
+img:hover {
+	transform: scale(1.1);
+	transition: transform 0.3s ease;
+}
+
+/* nth-child selector */
+.grid-container img:nth-child(odd) {
+	border-radius: 50%;
+}
