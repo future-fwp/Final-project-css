@@ -21,8 +21,25 @@
 				padding: 20px;
 			}
 
+			/* Add "Skip to Main Content" link */
+			a.skip-to-content {
+				position: absolute;
+				top: -40px;
+				left: 0;
+				background: #000;
+				color: white;
+				padding: 8px;
+				z-index: 100;
+			}
+
+			a.skip-to-content:focus {
+				top: 0;
+			}
+
 			/* Style the nav */
 			nav {
+				display: inline-block;
+				width: 80%;
 				background-color: #333;
 				padding: 10px;
 			}
@@ -33,17 +50,25 @@
 				padding: 0;
 			}
 
-			nav ul li {
-				display: inline-block;
-				width: 100px;
-				text-align: center;
-			}
+			/* Commenting out the li styling */
+			/*
+      nav ul li {
+        display: inline-block;
+        width: 100px;
+        text-align: center;
+      }
+      */
 
 			nav ul li a {
 				color: white;
 				text-decoration: none;
 				display: block;
 				padding: 10px;
+			}
+
+			/* Descendant selector for nav image */
+			nav img {
+				width: 10%;
 			}
 
 			/* Style the main content */
@@ -78,19 +103,64 @@
 				padding: 0;
 			}
 
-			li {
-				display: inline-block;
-				width: 100px;
-				text-align: center;
+			/* Commented out li style */
+			/*
+      li {
+        display: inline-block;
+        width: 100px;
+        text-align: center;
+      }
+      */
+
+			/* Style for the grid class */
+			.grid {
+				display: grid;
+				grid-template-columns: 40% 40%;
+				justify-content: space-between;
+				align-items: start;
+				row-gap: 20px;
+			}
+
+			/* Descendant selector for images in the grid class */
+			.grid img {
+				width: 100%;
+			}
+
+			/* Style for the flex class */
+			.flex {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
 			}
 		</style>
 		<title>My Final Project</title>
 	</head>
 	<body>
+		<!-- Skip to Main Content link -->
+		<a
+			href="#main-content"
+			class="skip-to-content"
+			>Skip to Main Content</a
+		>
+
 		<header>
 			<h1>Welcome to My Final Project</h1>
 		</header>
-		<main>
+
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Gallery</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+			<!-- Nav image -->
+			<img
+				src="navImage.jpg"
+				alt="Logo Image in Nav"
+			/>
+		</nav>
+
+		<main id="main-content">
 			<section>
 				<h2>About the Project</h2>
 				<p>This project demonstrates my understanding of HTML, CSS, and accessibility.</p>
@@ -103,7 +173,7 @@
 					<li>Traveling</li>
 				</ul>
 			</section>
-			<section>
+			<section class="grid">
 				<h2>Gallery</h2>
 				<img
 					src="myImage1.jpg"
@@ -119,6 +189,7 @@
 				/>
 			</section>
 		</main>
+
 		<footer>
 			<p>Check out my favorite website: <a href="https://www.example.com">Example.com</a></p>
 		</footer>
