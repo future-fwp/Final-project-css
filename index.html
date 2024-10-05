@@ -7,91 +7,81 @@
 			content="width=device-width, initial-scale=1.0"
 		/>
 		<style>
-			/* General Styling */
+			/* Style the body */
 			body {
 				font-family: Arial, sans-serif;
+				font-size: 16px;
 				margin: 0;
 				padding: 0;
+			}
+
+			/* Style the header */
+			header {
+				background-color: #f0f0f0;
+				padding: 20px;
+			}
+
+			/* Style the nav */
+			nav {
+				background-color: #333;
+				padding: 10px;
+			}
+
+			nav ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+			}
+
+			nav ul li {
+				display: inline-block;
+				width: 100px;
 				text-align: center;
 			}
 
-			header,
-			footer {
-				background-color: #f8f9fa;
-				padding: 10px 0;
-				margin-bottom: 20px;
+			nav ul li a {
+				color: white;
+				text-decoration: none;
+				display: block;
+				padding: 10px;
 			}
 
-			h1,
-			h2 {
-				margin: 10px 0;
-			}
-
+			/* Style the main content */
 			main {
-				display: grid;
-				grid-template-columns: 1fr; /* Single column for mobile view */
-				grid-gap: 10px; /* 10px gap between rows and columns */
-				justify-content: center;
-			}
-
-			section {
-				width: 90%; /* Default for mobile view */
-				margin: 10px;
+				background-color: #f9f9f9;
 				padding: 20px;
-				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-				background-color: #ffffff;
+				font-size: 18px;
 			}
 
-			section img {
-				width: 100%;
-				height: auto;
-				border-radius: 0;
+			/* Style the footer */
+			footer {
+				background-color: #333;
+				color: white;
+				padding: 20px;
+				text-align: center;
 			}
 
-			/* Tablet View */
-			@media screen and (min-width: 772px) {
-				main {
-					grid-template-columns: repeat(2, 1fr); /* Two-column grid for tablet */
-				}
-
-				section img {
-					border-radius: 50%; /* Circular images */
-				}
-
-				section:last-child {
-					grid-column: span 2; /* Last figure takes up both columns */
-				}
+			/* Style h1 */
+			h1 {
+				text-align: center;
+				font-family: "Georgia", serif;
+				color: #333;
 			}
 
-			/* Large Screen View */
-			@media screen and (min-width: 992px) {
-				main {
-					grid-template-columns: repeat(3, 1fr); /* Three-column grid */
-				}
-
-				section img {
-					border-radius: 0; /* Remove border radius for all images */
-				}
-
-				section:nth-child(3n) {
-					grid-column: span 2; /* Every third figure takes up both columns */
-				}
+			/* Style paragraphs */
+			p {
+				line-height: 1.6;
 			}
 
-			/* Prefers Reduced Motion */
-			@media (prefers-reduced-motion: reduce) {
-				html {
-					scroll-behavior: auto; /* Disable smooth scrolling */
-				}
+			/* Additional styling for list items */
+			ul {
+				padding: 0;
 			}
 
-			/* Dark Color Scheme */
-			@media (prefers-color-scheme: dark) {
-				section {
-					background-color: #333; /* Dark background for figures */
-					color: #ffdd57; /* Light font color */
-					border: 2px solid black; /* Black border */
-				}
+			li {
+				display: inline-block;
+				width: 100px;
+				text-align: center;
 			}
 		</style>
 		<title>My Final Project</title>
