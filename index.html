@@ -6,6 +6,70 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1.0"
 		/>
+		<style>
+			/* General Styling */
+			body {
+				font-family: Arial, sans-serif;
+				margin: 0;
+				padding: 0;
+				text-align: center;
+			}
+
+			header,
+			footer {
+				background-color: #f8f9fa;
+				padding: 10px 0;
+				margin-bottom: 20px;
+			}
+
+			h1,
+			h2 {
+				margin: 10px 0;
+			}
+
+			main {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-items: flex-start;
+			}
+
+			section {
+				width: 90%; /* Default for mobile view */
+				margin: 10px;
+				padding: 20px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+				background-color: #ffffff;
+			}
+
+			section img {
+				width: 100%;
+				height: auto;
+				max-height: 200px; /* Mobile default image size */
+			}
+
+			/* Tablet View */
+			@media screen and (min-width: 772px) {
+				section {
+					width: 45%; /* Set sections to 45% of the viewport width */
+				}
+
+				section img {
+					max-height: 30vh; /* Set max-height to 30% of the viewport height */
+				}
+			}
+
+			/* Large Screen View */
+			@media screen and (min-width: 998px) {
+				section {
+					width: 30%; /* Set sections to 30% of the viewport width */
+				}
+
+				section img {
+					max-height: none; /* Reset any max-height for images */
+				}
+			}
+		</style>
 		<title>My Final Project</title>
 	</head>
 	<body>
